@@ -4,9 +4,10 @@
   </div>
   <div class="col-md-7">
     <app-recipe-detail
-    *ngIf="selectedRecipe;else infoText"
-    [recipe]="selectedRecipe"></app-recipe-detail>
-    <ng-template #infoText></ng-template>
-    <p>Please select a Recipe!</p>
+      *ngIf="selectedRecipe; else infoText"
+      [recipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please select a Recipe!</p>
+    </ng-template>
   </div>
 </div>
