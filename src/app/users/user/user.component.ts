@@ -20,6 +20,7 @@ export class UserComponent implements OnInit {
         this.user.name = params['name'];
       }
     )
+
   }
 
 }
