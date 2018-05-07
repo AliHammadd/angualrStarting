@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx'; //when we need to use observable operators
-
+ 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
