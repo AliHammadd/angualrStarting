@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/Rx'; //when we need to use observable operators
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-  onLoadServers(){
-    this.router.navigate(['/servers']);
-  }
+    const myNumbers = Observable.interval(1000);
+    myNumbers.subscribe(
+      (number: Number) => {
+        console.log( number);
+      }
+    )
+  } 
+
+
 }
